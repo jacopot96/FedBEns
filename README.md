@@ -40,7 +40,7 @@ Supported datasets:
 - `CIFAR10`
 - `CIFAR100`
 
-**Usage:**
+## Usage
 
 different files executes different models:
 
