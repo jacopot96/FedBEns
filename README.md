@@ -7,10 +7,9 @@ This repository contains the code for the paper:
 
 - **Python version**: 3.12.8  
 - Install the required packages using:
-
 ```bash
 pip install -r requirements.txt
-
+```
 
 ## Code Structure
 This repository contains four main scripts to run both the proposed **FedBEns** algorithm and several baseline methods.
