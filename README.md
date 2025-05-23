@@ -15,30 +15,34 @@ pip install -r requirements.txt
 This repository contains four main scripts to run both the proposed **FedBEns** algorithm and several baseline methods.
 
 1) main_baselines.py : it runs the considered baselines, run it with:
-   python main_baselines.py --dataset 'dataset_name' --model 'model_name' --num_clients n_clients --local_epochs n_epochs --alpha= alpha_value --seed s --algs_to_run 'alg_name' 
-  This script runs baseline methods including:
-  
-  - `fedfisher_kfac`
-  - `otfusion`
-  - `fishermerge`
-  - `dense`
-  - `regmean`
-  
-  Supported models:
-  
-  - `LeNet`
-  - `CNN`
-  - `ResNet18`
-  
-  Supported datasets:
-  
-  - `FashionMNIST`
-  - `SVHN`
-  - `CIFAR10`
-  - `CIFAR100`
-    
-e.g., : python main_baselines.py --dataset 'FashionMNIST' --model 'LeNet' --num_clients 5 --local_epochs 20 --alpha=0.1 --seed 1000 --algs_to_run 'fedfisher_kfac'
-
+   ```bash
+   python main_baselines.py --dataset 'dataset_name' --model 'model_name' --num_clients n_clients --local_epochs n_epochs --alpha= alpha_value --seed s --algs_to_run 'alg_name'
+   ```
+   This script runs baseline methods including:
+     
+     - `fedfisher_kfac`
+     - `otfusion`
+     - `fishermerge`
+     - `dense`
+     - `regmean`
+     
+     Supported models:
+     
+     - `LeNet`
+     - `CNN`
+     - `ResNet18`
+     
+     Supported datasets:
+     
+     - `FashionMNIST`
+     - `SVHN`
+     - `CIFAR10`
+     - `CIFAR100`
+     - 
+   Usage example:
+   ```
+   python main_baselines.py --dataset 'FashionMNIST' --model 'LeNet' --num_clients 5 --local_epochs 20 --alpha=0.1 --seed 1000 --algs_to_run 'fedfisher_kfac'
+   ```
 
 ## Setup
 
