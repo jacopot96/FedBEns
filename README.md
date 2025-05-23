@@ -43,45 +43,12 @@ This repository contains four main scripts to run both the proposed **FedBEns** 
    ```
    python main_baselines.py --dataset 'FashionMNIST' --model 'LeNet' --num_clients 5 --local_epochs 20 --alpha=0.1 --seed 1000 --algs_to_run 'fedfisher_kfac'
    ```
+2) main_FedBEns_kron.py : it runs the FedBENS algorithm with Kronecker factorization of the Hessian. The command follows the previous logic. As an exemple:
+   ```
+   python3 main_FedBEns_kron.py  --dataset "FashionMNIST" --model "LeNet" --seed=42 --local_epochs=20 --alpha=0.1 --temperature=0.1 --num_clients=5 --n_mixtures 3 --weights False --local_ens=1 --val_at_server True 
 
-## Setup
+   ```
 
-- **Python version**: 3.12.8  
-- Install the required packages using:
-
-```bash
-pip install -r requirements.txt
-
-## Code Structure
-
-This repository contains four main scripts to run both the proposed **FedBEns** algorithm and several baseline methods.
-
----
-
-### `main_baselines.py`
-
-This script runs baseline methods including:
-
-- `fedfisher_kfac`
-- `otfusion`
-- `fishermerge`
-- `dense`
-- `regmean`
-
-Supported models:
-
-- `LeNet`
-- `CNN`
-- `ResNet18`
-
-Supported datasets:
-
-- `FashionMNIST`
-- `SVHN`
-- `CIFAR10`
-- `CIFAR100`
-
-## Usage
 
 different files executes different models:
 
