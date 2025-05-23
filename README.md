@@ -1,10 +1,48 @@
 # FedBEns
-Code for the paper: "FedBEns: One-Shot Federated Learning based on Bayesian Ensemble" 
 
-python version 3.12.8
-the file requirements.txt containes the required packages, installed with pip
+This repository contains the code for the paper:  
+**"FedBEns: One-Shot Federated Learning based on Bayesian Ensemble"**
 
-code structure:
+## Setup
+
+- **Python version**: 3.12.8  
+- Install the required packages using:
+
+```bash
+pip install -r requirements.txt
+
+## Code Structure
+
+This repository contains four main scripts to run both the proposed **FedBEns** algorithm and several baseline methods.
+
+---
+
+### `main_baselines.py`
+
+This script runs baseline methods including:
+
+- `fedfisher_kfac`
+- `otfusion`
+- `fishermerge`
+- `dense`
+- `regmean`
+
+Supported models:
+
+- `LeNet`
+- `CNN`
+- `ResNet18`
+
+Supported datasets:
+
+- `FashionMNIST`
+- `SVHN`
+- `CIFAR10`
+- `CIFAR100`
+
+**Usage:**
+
+different files executes different models:
 
 1) main_baselines.py : it runs the considered baselines, run it with:
 
