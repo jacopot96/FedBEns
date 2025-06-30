@@ -164,9 +164,9 @@ for alg in algs_to_run:
     )
 
     starting_points = [torch.median(torch.stack([t[i] for t in model_vectors]), dim=0).values for i in range(len(starting_points))]
-    W_hats = [global_posterior.optimize(0.01, 500, sp, net_glob_org, dataset_val, args_dict) for sp in starting_points]
+    W_hats = [global_posterior.optimize(0.01, 300, sp, net_glob_org, dataset_val, args_dict) for sp in starting_points]
 
-    models = [instantiate_model(W_hat, net_glob_org) for W_hat in W_hats]
+    models = [instantiate_model(W_hat,  copy.deepcopy(net_glob).apply(reset)) for W_hat in W_hats]
 
     for i, model in enumerate(models):
         acc, loss, _ = test_img(model, dataset_test_global, args_dict)

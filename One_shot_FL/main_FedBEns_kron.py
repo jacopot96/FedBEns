@@ -116,7 +116,7 @@ W_hats = [
     global_posterior.optimize(0.01, 300, start, net_glob_org, dataset_val, args)
     for start in starting_points_median
 ]
-final_models = [instantiate_model(W, net_glob_org) for W in W_hats]
+final_models = [instantiate_model(W, copy.deepcopy(net_glob).apply(reset)) for W in W_hats]
 
 # Logging
 dict_results = {}
